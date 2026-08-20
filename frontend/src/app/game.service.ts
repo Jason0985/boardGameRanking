@@ -39,6 +39,12 @@ export class GameService {
     this.save(players);
   }
 
+  removePlayer(id: string) {
+    const players = this.playersSubject.value.filter((player) => player.id !== id);
+    this.playersSubject.next(players);
+    this.save(players);
+  }
+
   updateScore(id: string, pointDelta: number) {
     const players = this.playersSubject.value.map((p) =>
       p.id === id ? { ...p, score: p.score + pointDelta } : p
@@ -47,10 +53,21 @@ export class GameService {
     this.save(players);
   }
 
-  setScore(id: string, score: number) {
+  completeRound(roundScores: Readonly<Record<string, number | null>>) {
     const players = this.playersSubject.value.map((p) =>
-      p.id === id ? { ...p, score: Number.isFinite(score) ? score : 0 } : p
+      p.id in roundScores && Number.isFinite(roundScores[p.id])
+        ? { ...p, score: p.score + (roundScores[p.id] ?? 0) }
+        : p
     );
+    this.playersSubject.next(players);
+    this.save(players);
+  }
+
+  resetScores() {
+    const players = this.playersSubject.value.map((player) => ({
+      ...player,
+      score: 0,
+    }));
     this.playersSubject.next(players);
     this.save(players);
   }

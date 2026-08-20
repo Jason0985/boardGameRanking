@@ -15,7 +15,7 @@
   width: min(100%, 680px);
   text-align: center;
   position: relative;
-  padding: 22px 0 28px;
+  margin-bottom: 17px;
 }
 
 .scoreboard-root .badge {
@@ -34,9 +34,7 @@
 .scoreboard-root .title {
   margin: 18px 0 10px;
   font-weight: 700;
-  font-size: clamp(2.25rem, 10vw, 4.25rem);
   line-height: 0.98;
-  letter-spacing: -0.04em;
 }
 
 .scoreboard-root .title .accent {
@@ -64,7 +62,58 @@
 
 .scoreboard-root .add-card {
   border-radius: 22px;
-  padding: 10px;
+  padding: 18px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scoreboard-root .add-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff6b81, #7c4dff);
+}
+
+.add-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.add-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.add-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: 13px;
+  background: rgba(255, 107, 129, 0.16);
+  color: #ff9aaa;
+}
+
+.add-icon mat-icon {
+  font-size: 21px;
+}
+
+.add-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.add-hint {
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
 }
 
 .top {
@@ -75,10 +124,22 @@
 
 .name-field {
   flex: 1;
+  margin-bottom: -1.25em;
 }
 
 .name-field input {
   color: #fff;
+}
+
+.add-button {
+  min-height: 56px;
+  padding: 0 18px;
+  border-radius: 14px;
+  white-space: nowrap;
+}
+
+.add-button mat-icon {
+  margin-right: 6px;
 }
 
 .list {
@@ -91,12 +152,20 @@
 
 .player-card {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   min-height: 92px;
   padding: 16px 18px;
   border-radius: 18px;
   gap: 16px;
+}
+
+.mat-card-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .info {
@@ -110,6 +179,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 12px;
 }
 
 .rank-badge {
@@ -150,12 +220,26 @@
 
 .score-field {
   width: 112px;
-  flex: 0 0 112px;
+}
+
+.remove-player-button {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  box-shadow: 0 8px 18px rgba(244, 67, 54, 0.28);
+}
+
+.remove-player-button mat-icon {
+  margin: 0;
+  color: #fff;
 }
 
 .footer {
   margin-top: 26px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   justify-content: center;
 }
 
@@ -178,8 +262,22 @@
 }
 
 @media (max-width: 420px) {
+  .scoreboard-root .add-card {
+    padding: 16px 14px;
+  }
+
+  .top {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .add-button {
+    width: 100%;
+  }
+
   .player-card {
     padding: 14px;
+    padding: 17px 30px;
   }
 
   .score-field {

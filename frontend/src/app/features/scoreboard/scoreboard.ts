@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { Router } from '@angular/router';
 import { GameService } from '../../game.service';
 import { Player as PlayerModel } from '../../player.model';
 import { Observable } from 'rxjs';
@@ -28,9 +29,15 @@ import { map } from 'rxjs/operators';
 })
 export class Scoreboard {
   name = '';
+  gameStarted = false;
+  hasCompletedRound = false;
+  roundScores: Record<string, number | null> = {};
   players$: Observable<PlayerModel[]>;
 
-  constructor(private game: GameService) {
+  constructor(
+    private game: GameService,
+    private router: Router,
+  ) {
     this.players$ = this.game.players$.pipe(
       map((players) => players.slice().sort((a, b) => b.score - a.score))
     );
@@ -41,12 +48,28 @@ export class Scoreboard {
     this.name = '';
   }
 
-  setScore(p: PlayerModel, score: string) {
-    this.game.setScore(p.id, Number(score));
+  removePlayer(playerId: string) {
+    this.game.removePlayer(playerId);
   }
 
-  reset() {
-    this.game.resetGame();
+  setRoundScore(playerId: string, score: number | null) {
+    this.roundScores[playerId] = score;
+  }
+
+  startGame() {
+    this.gameStarted = true;
+  }
+
+  nextRound() {
+    this.game.completeRound(this.roundScores);
+    this.roundScores = {};
+    this.hasCompletedRound = true;
+  }
+
+  endGame() {
+    this.game.completeRound(this.roundScores);
+    this.roundScores = {};
+    this.router.navigate(['/end-score']);
   }
 
   trackById(_: number, p: PlayerModel) {
