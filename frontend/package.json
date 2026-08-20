@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:pages": "ng build --base-href /boardGameRaking/ --deploy-url /boardGameRaking/",
+    "deploy": "npm run build:pages && npx angular-cli-ghpages --dir=dist/frontend/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:frontend": "node dist/frontend/server/server.mjs"
