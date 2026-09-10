@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1789042478218,
+  "timestamp": 1789042955710,
   "index": "/boardGameRanking/index.html",
   "assetGroups": [
     {
@@ -11,12 +11,12 @@
         "ignoreVary": true
       },
       "urls": [
-        "/boardGameRanking/chunk-BHPGEcG-.js",
-        "/boardGameRanking/chunk-D2IuBCLU.js",
-        "/boardGameRanking/chunk-DDu7IT2k.js",
+        "/boardGameRanking/chunk-BZO-zX3e.js",
+        "/boardGameRanking/chunk-BoCVKHMv.js",
+        "/boardGameRanking/chunk-DBQkMlNW.js",
         "/boardGameRanking/favicon.ico",
         "/boardGameRanking/index.html",
-        "/boardGameRanking/main-B7P2GQNQ.js",
+        "/boardGameRanking/main-HZG77L43.js",
         "/boardGameRanking/manifest.webmanifest",
         "/boardGameRanking/styles-67WK4QGN.css"
       ],
@@ -39,13 +39,13 @@
   "dataGroups": [],
   "hashTable": {
     "/boardGameRanking/assets/icons/app_icon.jpg": "4bde37064230483c929f49dd70b7201e66f27457",
-    "/boardGameRanking/chunk-BHPGEcG-.js": "1dfacfb22c2eed37aa188ec7053a52edadc933db",
-    "/boardGameRanking/chunk-D2IuBCLU.js": "0c52e2a3a12171bf198424fab7a3ffbd13082623",
-    "/boardGameRanking/chunk-DDu7IT2k.js": "97d6372b2a944feef3578f08705d4b732a51dc91",
+    "/boardGameRanking/chunk-BZO-zX3e.js": "8f8b6d2d14305f069200b723db917a15fd0f232d",
+    "/boardGameRanking/chunk-BoCVKHMv.js": "c304cde65f948caa732f65ee0ad616c4ae832a42",
+    "/boardGameRanking/chunk-DBQkMlNW.js": "6115a35bfb3b53d2cf4717cc866d644e21c8ca2a",
     "/boardGameRanking/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "/boardGameRanking/index.html": "3d5fd8cd0195f73261b9f0e44dd63058f18a0640",
-    "/boardGameRanking/main-B7P2GQNQ.js": "67074b0003282f5b260f913930a1e0777bc9a335",
-    "/boardGameRanking/manifest.webmanifest": "df9211ff6e894796f65b53466061b11d05c8fe1d",
+    "/boardGameRanking/index.html": "54b730ffe8a29c8d38af4f118956715726c66963",
+    "/boardGameRanking/main-HZG77L43.js": "08ae2540488b777cea4bf9c65532fd373fa9e956",
+    "/boardGameRanking/manifest.webmanifest": "307200368a17959b384242ea7c3c638646867e6a",
     "/boardGameRanking/podium_icon.png": "ad01c9ac9286738f88e733ee1a95fc2afb448459",
     "/boardGameRanking/styles-67WK4QGN.css": "41f64e855e88a25a0a29141ae4cb0f4dd5fa6084"
   },

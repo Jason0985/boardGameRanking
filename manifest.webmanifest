@@ -1,7 +1,7 @@
 {
   "name": "Board Game Scoreboard",
   "short_name": "Scoreboard",
-  "theme_color": "#1976d2",
+  "theme_color": "#000000",
   "background_color": "#fafafa",
   "display": "standalone",
   "id": "/boardGameRanking/",
