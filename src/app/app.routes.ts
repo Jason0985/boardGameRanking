@@ -1,8 +1,18 @@
 import { Routes } from '@angular/router';
-import { Scoreboard } from './features/scoreboard/scoreboard';
-import { EndScore } from './features/end-score/end-score';
 
 export const routes: Routes = [
-  { path: '', component: Scoreboard },
-  { path: 'end-score', component: EndScore },
+  {
+    path: '',
+    loadComponent: () =>
+      import('./features/scoreboard/scoreboard').then(
+        (module) => module.Scoreboard
+      ),
+  },
+  {
+    path: 'end-score',
+    loadComponent: () =>
+      import('./features/end-score/end-score').then(
+        (module) => module.EndScore
+      ),
+  },
 ];
