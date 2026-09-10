@@ -9,7 +9,7 @@
     "start_url": "/boardGameRanking/",
     "icons": [
       {
-        "src": "podium_icon.png",
+        "src": "app_icon.jpg",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "any"

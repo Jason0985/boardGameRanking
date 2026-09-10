@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1789035004189,
+  "timestamp": 1789035678450,
   "index": "/boardGameRanking/index.html",
   "assetGroups": [
     {
@@ -30,7 +30,7 @@
         "ignoreVary": true
       },
       "urls": [
-        "/boardGameRanking/assets/icons/podium_icon.png",
+        "/boardGameRanking/assets/icons/app_icon.jpg",
         "/boardGameRanking/podium_icon.png"
       ],
       "patterns": []
@@ -38,14 +38,14 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/boardGameRanking/assets/icons/podium_icon.png": "ad01c9ac9286738f88e733ee1a95fc2afb448459",
+    "/boardGameRanking/assets/icons/app_icon.jpg": "4bde37064230483c929f49dd70b7201e66f27457",
     "/boardGameRanking/chunk-DFSieL20.js": "45467c63bc1c827801f771867652da4b213217cb",
     "/boardGameRanking/chunk-DGJPzI9Q.js": "cce8ffcdc43f2e08d8218f652a7b385e31a25400",
     "/boardGameRanking/chunk-MZ7W-6qC.js": "2c5788eab67fa632480f9d25248ea553ce96ec84",
     "/boardGameRanking/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
     "/boardGameRanking/index.html": "140065f0cf5933fe99729fb52a34d8f636470727",
     "/boardGameRanking/main-7KN4234S.js": "6283d9771427d728b59b5440bf291a6f8dbb4d9c",
-    "/boardGameRanking/manifest.webmanifest": "14920e226445e65b1ec5df6f31309a77311f20a2",
+    "/boardGameRanking/manifest.webmanifest": "b38acdaee2c4b5b44c65772f5b4293cbe143d11f",
     "/boardGameRanking/podium_icon.png": "ad01c9ac9286738f88e733ee1a95fc2afb448459",
     "/boardGameRanking/styles-67WK4QGN.css": "41f64e855e88a25a0a29141ae4cb0f4dd5fa6084"
   },
