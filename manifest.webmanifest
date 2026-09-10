@@ -7,6 +7,9 @@
   "id": "/boardGameRanking/",
   "scope": "/boardGameRanking/",
   "start_url": "/boardGameRanking/",
+  "apple-mobile-web-app-capable": "yes",
+  "apple-mobile-web-app-title": "Scoreboard",
+  "apple-mobile-web-app-status-bar-style": "default",
   "icons": [
     {
       "src": "assets/icons/app_icon.jpg",
