@@ -1,17 +1,18 @@
 {
-    "name": "boardGameRanking",
-    "short_name": "boardGameRanking",
+    "name": "Board Game Scoreboard",
+    "short_name": "Scoreboard",
     "theme_color": "#1976d2",
     "background_color": "#fafafa",
     "display": "standalone",
-    "scope": "./",
-    "start_url": "./",
+    "id": "/boardGameRanking/",
+    "scope": "/boardGameRanking/",
+    "start_url": "/boardGameRanking/",
     "icons": [
       {
-        "src": "assets/icons/icon-512x512.png",
+        "src": "app_icon.jpg",
         "sizes": "512x512",
         "type": "image/png",
-        "purpose": "any maskable"
+        "purpose": "any"
       }
     ]
-  }
+}
