@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 16px;
   width: min(100%, 680px);
-  min-height: 100dvh;
+  min-height: calc(100dvh - 88px);
   box-sizing: border-box;
   margin: 0 auto;
   padding: 17px 16px 56px;

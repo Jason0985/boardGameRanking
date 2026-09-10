@@ -69,7 +69,7 @@ export class Scoreboard {
   endGame() {
     this.game.completeRound(this.roundScores);
     this.roundScores = {};
-    this.router.navigate(['/end-score']);
+    this.router.navigate(['/ranking/end-score']);
   }
 
   trackById(_: number, p: PlayerModel) {

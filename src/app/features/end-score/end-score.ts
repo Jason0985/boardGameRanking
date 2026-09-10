@@ -34,6 +34,6 @@ export class EndScore {
 
   startNewGame() {
     this.game.resetScores();
-    this.router.navigate(['/']);
+    this.router.navigate(['/ranking']);
   }
 }
