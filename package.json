@@ -1,15 +1,16 @@
 {
   "name": "frontend",
   "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "build:pages": "ng build --base-href /GameRoster-beta/ --deploy-url /GameRoster-beta/",
-    "deploy": "npm run build:pages && npx angular-cli-ghpages --dir=dist/frontend/browser",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-  },
+    "scripts": {
+      "ng": "ng",
+      "start": "ng serve",
+      "build": "ng build",
+      "build:pages": "ng build --base-href /boardGameRanking/ --deploy-url /boardGameRanking/",
+      "deploy": "npm run build:pages && npx angular-cli-ghpages --dir=dist/frontend/browser",
+      "watch": "ng build --watch --configuration development",
+      "test": "ng test"
+    },
+
   "private": true,
   "packageManager": "npm@11.17.0",
   "dependencies": {
