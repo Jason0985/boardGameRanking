@@ -4,8 +4,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
-import { GameService } from '../../game.service';
-import { Player } from '../../player.model';
+import { GameService } from '../../../game.service';
+import { Player } from '../../../player.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -18,11 +18,13 @@ import { map } from 'rxjs/operators';
 })
 export class EndScore {
   players$: Observable<Player[]>;
+  roundCount$: Observable<number>
 
   constructor(
     private game: GameService,
     private router: Router,
   ) {
+    this.roundCount$ = this.game.roundCount$;
     this.players$ = this.game.players$.pipe(
       map((players) => players.slice().sort((a, b) => b.score - a.score))
     );
@@ -34,6 +36,6 @@ export class EndScore {
 
   startNewGame() {
     this.game.resetScores();
-    this.router.navigate(['/']);
+    this.router.navigate(['/ranking']);
   }
 }
